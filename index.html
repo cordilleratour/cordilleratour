@@ -202,7 +202,7 @@ body{font-family:var(--fuente-cuerpo);background:var(--gris-bg);color:var(--text
   <div class="nav-tabs">
     <button class="nav-tab active" onclick="cambiarVista('dashboard',this)">Dashboard</button>
     <button class="nav-tab" onclick="cambiarVista('sponsors',this)">Sponsors</button>
-    <button class="nav-tab" onclick="cambiarVista('operativa',this)">1ª Fecha</button>
+    <button class="nav-tab" onclick="cambiarVista('operativa',this)">2ª Fecha</button>
     <button class="nav-tab" onclick="cambiarVista('finsemana',this)">Fin de Semana</button>
   </div>
   <div class="nav-right">
@@ -223,8 +223,8 @@ body{font-family:var(--fuente-cuerpo);background:var(--gris-bg);color:var(--text
       <div class="countdown-label">Próxima fecha</div>
       <div class="countdown-numero" id="dias-restantes">—</div>
       <div class="countdown-label">días</div>
-      <div class="countdown-fecha">24 · 25 · 26 Abril</div>
-      <div class="hito-badge">Hito B · En curso</div>
+      <div class="countdown-fecha">3 · 4 · 5 Julio</div>
+      <div class="hito-badge">Hito A · Arranque</div>
     </div>
     <div class="card">
       <div class="card-titulo">Sponsors confirmados</div>
@@ -238,7 +238,7 @@ body{font-family:var(--fuente-cuerpo);background:var(--gris-bg);color:var(--text
         <div class="semaforo-item"><span class="dot dot-amarillo"></span><span class="semaforo-nombre">Administración</span><span class="semaforo-rol">Augusto</span><span class="semaforo-estado estado-alerta">En proceso</span></div>
         <div class="semaforo-item"><span class="dot dot-amarillo"></span><span class="semaforo-nombre">Comercial</span><span class="semaforo-rol">Juan</span><span class="semaforo-estado estado-alerta">Activo</span></div>
         <div class="semaforo-item"><span class="dot dot-gris"></span><span class="semaforo-nombre">Tenis</span><span class="semaforo-rol">Carry</span><span class="semaforo-estado estado-nd">Pendiente</span></div>
-        <div class="semaforo-item"><span class="dot dot-gris"></span><span class="semaforo-nombre">Pádel</span><span class="semaforo-rol">Máximo</span><span class="semaforo-estado estado-nd">Pendiente</span></div>
+        <div class="semaforo-item"><span class="dot dot-gris"></span><span class="semaforo-nombre">Pádel</span><span class="semaforo-rol">Guillermo</span><span class="semaforo-estado estado-nd">Pendiente</span></div>
         <div class="semaforo-item"><span class="dot dot-gris"></span><span class="semaforo-nombre">Comunicación</span><span class="semaforo-rol">Augusto · Diego</span><span class="semaforo-estado estado-nd">Pendiente</span></div>
         <div class="semaforo-item"><span class="dot dot-gris"></span><span class="semaforo-nombre">Streaming</span><span class="semaforo-rol">Bajo la Suela</span><span class="semaforo-estado estado-nd">Pendiente</span></div>
       </div>
@@ -284,12 +284,12 @@ body{font-family:var(--fuente-cuerpo);background:var(--gris-bg);color:var(--text
 <!-- ══ OPERATIVA ══ -->
 <div class="vista" id="vista-operativa">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
-    <div class="seccion-titulo">1ª Fecha · 24-25-26 Abril</div>
+    <div class="seccion-titulo">2ª Fecha · 3-4-5 Julio</div>
     <button class="btn btn-primary" onclick="abrirModalTarea()">+ Tarea</button>
   </div>
   <div class="hitos-barra">
-    <div class="hito-btn completado" onclick="filtrarHito('A',this)"><span class="hito-letra">A</span><span class="hito-nombre">Base cerrada</span><span class="hito-estado-txt">✓ Completado</span></div>
-    <div class="hito-btn actual sel" onclick="filtrarHito('B',this)"><span class="hito-letra">B</span><span class="hito-nombre">Venta activa</span><span class="hito-estado-txt">En curso</span></div>
+    <div class="hito-btn actual sel" onclick="filtrarHito('A',this)"><span class="hito-letra">A</span><span class="hito-nombre">Base cerrada</span><span class="hito-estado-txt">En curso</span></div>
+    <div class="hito-btn pendiente" onclick="filtrarHito('B',this)"><span class="hito-letra">B</span><span class="hito-nombre">Venta activa</span><span class="hito-estado-txt">Pendiente</span></div>
     <div class="hito-btn pendiente" onclick="filtrarHito('C',this)"><span class="hito-letra">C</span><span class="hito-nombre">Cierres operativos</span><span class="hito-estado-txt">Pendiente</span></div>
     <div class="hito-btn pendiente" onclick="filtrarHito('D',this)"><span class="hito-letra">D</span><span class="hito-nombre">Semana previa</span><span class="hito-estado-txt">Pendiente</span></div>
     <div class="hito-btn pendiente" style="flex:0.4" onclick="filtrarHito('todos',this)"><span class="hito-letra" style="font-size:12px">TODAS</span></div>
@@ -310,9 +310,9 @@ body{font-family:var(--fuente-cuerpo);background:var(--gris-bg);color:var(--text
   <div class="progreso-barra"><div class="progreso-fill" id="progreso-fill" style="width:0%"></div></div>
   <div class="progreso-texto" id="progreso-texto">Cargando...</div>
   <div class="jornadas-tabs">
-    <button class="jornada-tab active" onclick="cambiarJornada('viernes',this)">Viernes 24</button>
-    <button class="jornada-tab" onclick="cambiarJornada('sabado',this)">Sábado 25</button>
-    <button class="jornada-tab" onclick="cambiarJornada('domingo',this)">Domingo 26</button>
+    <button class="jornada-tab active" onclick="cambiarJornada('viernes',this)">Viernes 3</button>
+    <button class="jornada-tab" onclick="cambiarJornada('sabado',this)">Sábado 4</button>
+    <button class="jornada-tab" onclick="cambiarJornada('domingo',this)">Domingo 5</button>
   </div>
   <div id="jornada-viernes" class="jornada-contenido active"></div>
   <div id="jornada-sabado" class="jornada-contenido"></div>
@@ -421,7 +421,7 @@ body{font-family:var(--fuente-cuerpo);background:var(--gris-bg);color:var(--text
       <div class="form-group"><label class="form-label">Responsable</label>
         <select class="form-select" id="ta-responsable">
           <option>Guillermo Riccitelli</option><option>Augusto Orellano</option><option>Juan Hogalde</option>
-          <option>Diego Ruiz</option><option>Guillermo Carry</option><option>Máximo Cornejo</option><option>Bajo la Suela</option>
+          <option>Diego Ruiz</option><option>Guillermo Carry</option><option>Bajo la Suela</option>
         </select>
       </div>
       <div class="form-group"><label class="form-label">Fecha límite</label><input class="form-input" id="ta-fecha" type="date"></div>
@@ -442,42 +442,49 @@ body{font-family:var(--fuente-cuerpo);background:var(--gris-bg);color:var(--text
 <script>
 // ══════════════ DATOS DEFAULT ══════════════
 const TAREAS_DEFAULT = [
-  {id:1,nombre:'Organigrama confirmado',area:'admin',responsable:'Augusto Orellano',fecha:'2026-04-06',estado:'listo',hito:'A'},
-  {id:2,nombre:'Presupuesto base armado',area:'admin',responsable:'Augusto Orellano',fecha:'2026-04-10',estado:'curso',hito:'A'},
-  {id:3,nombre:'Paquetes comerciales definidos',area:'comercial',responsable:'Juan Hogalde',fecha:'2026-04-08',estado:'listo',hito:'A'},
-  {id:4,nombre:'Reglamento tenis (categorías + cupos)',area:'deportivo',responsable:'Guillermo Carry',fecha:'2026-04-10',estado:'pendiente',hito:'A'},
-  {id:5,nombre:'Reglamento pádel (categorías + cupos)',area:'deportivo',responsable:'Máximo Cornejo',fecha:'2026-04-10',estado:'pendiente',hito:'A'},
-  {id:6,nombre:'Pipeline de sponsors activo',area:'comercial',responsable:'Juan Hogalde',fecha:'2026-04-10',estado:'curso',hito:'B'},
-  {id:7,nombre:'Dossier comercial final',area:'comercial',responsable:'Juan Hogalde',fecha:'2026-04-09',estado:'listo',hito:'B'},
-  {id:8,nombre:'Identidad visual aplicada a piezas',area:'comunicacion',responsable:'Bajo la Suela',fecha:'2026-04-12',estado:'pendiente',hito:'B'},
-  {id:9,nombre:'Calendario de contenidos RRSS',area:'comunicacion',responsable:'Augusto Orellano',fecha:'2026-04-12',estado:'pendiente',hito:'B'},
-  {id:10,nombre:'Inscripciones abiertas',area:'admin',responsable:'Augusto Orellano',fecha:'2026-04-13',estado:'pendiente',hito:'B'},
-  {id:11,nombre:'Layout del predio definido',area:'produccion',responsable:'Augusto Orellano',fecha:'2026-04-16',estado:'pendiente',hito:'C'},
-  {id:12,nombre:'Señalética enviada a imprenta',area:'produccion',responsable:'Bajo la Suela',fecha:'2026-04-17',estado:'pendiente',hito:'C'},
-  {id:13,nombre:'Árbitros confirmados tenis',area:'deportivo',responsable:'Guillermo Carry',fecha:'2026-04-16',estado:'pendiente',hito:'C'},
-  {id:14,nombre:'Árbitros confirmados pádel',area:'deportivo',responsable:'Máximo Cornejo',fecha:'2026-04-16',estado:'pendiente',hito:'C'},
-  {id:15,nombre:'Plan de activaciones sponsors en sede',area:'comercial',responsable:'Juan Hogalde',fecha:'2026-04-17',estado:'pendiente',hito:'C'},
-  {id:16,nombre:'Cronograma final del evento',area:'admin',responsable:'Guillermo Riccitelli',fecha:'2026-04-20',estado:'pendiente',hito:'D'},
-  {id:17,nombre:'Prueba técnica streaming (audio + overlays)',area:'streaming',responsable:'Bajo la Suela',fecha:'2026-04-23',estado:'pendiente',hito:'D'},
-  {id:18,nombre:'Checklist final por área',area:'produccion',responsable:'Guillermo Riccitelli',fecha:'2026-04-22',estado:'pendiente',hito:'D'},
-  {id:19,nombre:'Gacetilla de prensa previa',area:'comunicacion',responsable:'Diego Ruiz',fecha:'2026-04-18',estado:'pendiente',hito:'D'},
-  {id:20,nombre:'Escaleta de transmisión streaming',area:'streaming',responsable:'Bajo la Suela',fecha:'2026-04-20',estado:'pendiente',hito:'D'},
+  // HITO A — Base cerrada (hasta ~15 mayo)
+  {id:1,nombre:'Organigrama 2ª Fecha confirmado',area:'admin',responsable:'Augusto Orellano',fecha:'2026-05-15',estado:'pendiente',hito:'A'},
+  {id:2,nombre:'Presupuesto base 2ª Fecha',area:'admin',responsable:'Augusto Orellano',fecha:'2026-05-15',estado:'pendiente',hito:'A'},
+  {id:3,nombre:'Paquetes comerciales actualizados',area:'comercial',responsable:'Juan Hogalde',fecha:'2026-05-15',estado:'pendiente',hito:'A'},
+  {id:4,nombre:'Reglamento tenis 2ª Fecha',area:'deportivo',responsable:'Guillermo Carry',fecha:'2026-05-20',estado:'pendiente',hito:'A'},
+  {id:5,nombre:'Reglamento pádel 2ª Fecha',area:'deportivo',responsable:'Guillermo Riccitelli',fecha:'2026-05-20',estado:'pendiente',hito:'A'},
+  {id:6,nombre:'Sede confirmada para Julio',area:'admin',responsable:'Guillermo Riccitelli',fecha:'2026-05-15',estado:'pendiente',hito:'A'},
+  // HITO B — Venta activa (hasta ~6 junio)
+  {id:7,nombre:'Pipeline de sponsors 2ª Fecha activo',area:'comercial',responsable:'Juan Hogalde',fecha:'2026-05-25',estado:'pendiente',hito:'B'},
+  {id:8,nombre:'Dossier comercial 2ª Fecha',area:'comercial',responsable:'Juan Hogalde',fecha:'2026-05-22',estado:'pendiente',hito:'B'},
+  {id:9,nombre:'Identidad visual 2ª Fecha aplicada',area:'comunicacion',responsable:'Bajo la Suela',fecha:'2026-05-28',estado:'pendiente',hito:'B'},
+  {id:10,nombre:'Calendario de contenidos RRSS',area:'comunicacion',responsable:'Augusto Orellano',fecha:'2026-05-28',estado:'pendiente',hito:'B'},
+  {id:11,nombre:'Inscripciones abiertas',area:'admin',responsable:'Augusto Orellano',fecha:'2026-06-01',estado:'pendiente',hito:'B'},
+  {id:12,nombre:'Informe sponsors 1ª Fecha enviado',area:'comercial',responsable:'Juan Hogalde',fecha:'2026-05-20',estado:'pendiente',hito:'B'},
+  // HITO C — Cierres operativos (hasta ~20 junio)
+  {id:13,nombre:'Layout del predio definido',area:'produccion',responsable:'Augusto Orellano',fecha:'2026-06-12',estado:'pendiente',hito:'C'},
+  {id:14,nombre:'Señalética enviada a imprenta',area:'produccion',responsable:'Bajo la Suela',fecha:'2026-06-15',estado:'pendiente',hito:'C'},
+  {id:15,nombre:'Árbitros confirmados tenis',area:'deportivo',responsable:'Guillermo Carry',fecha:'2026-06-12',estado:'pendiente',hito:'C'},
+  {id:16,nombre:'Árbitros confirmados pádel',area:'deportivo',responsable:'Guillermo Riccitelli',fecha:'2026-06-12',estado:'pendiente',hito:'C'},
+  {id:17,nombre:'Plan de activaciones sponsors en sede',area:'comercial',responsable:'Juan Hogalde',fecha:'2026-06-15',estado:'pendiente',hito:'C'},
+  {id:18,nombre:'Mejoras operativas de 1ª Fecha aplicadas',area:'produccion',responsable:'Guillermo Riccitelli',fecha:'2026-06-10',estado:'pendiente',hito:'C'},
+  // HITO D — Semana previa (hasta 3 julio)
+  {id:19,nombre:'Cronograma final del evento',area:'admin',responsable:'Guillermo Riccitelli',fecha:'2026-06-28',estado:'pendiente',hito:'D'},
+  {id:20,nombre:'Prueba técnica streaming (audio + overlays)',area:'streaming',responsable:'Bajo la Suela',fecha:'2026-07-02',estado:'pendiente',hito:'D'},
+  {id:21,nombre:'Checklist final por área',area:'produccion',responsable:'Guillermo Riccitelli',fecha:'2026-06-30',estado:'pendiente',hito:'D'},
+  {id:22,nombre:'Gacetilla de prensa previa',area:'comunicacion',responsable:'Diego Ruiz',fecha:'2026-06-26',estado:'pendiente',hito:'D'},
+  {id:23,nombre:'Escaleta de transmisión streaming',area:'streaming',responsable:'Bajo la Suela',fecha:'2026-06-28',estado:'pendiente',hito:'D'},
 ];
 
 const CHECKLIST_DATA = {
   viernes:[
     {sec:'Antes de arrancar',items:[{t:'Briefing operativo 10 min con todo el equipo',r:'Guillermo'},{t:'Setup de streaming operativo confirmado',r:'Bajo la Suela'},{t:'Sponsors en posición y señalética visible',r:'Juan'},{t:'Cuadros publicados en RRSS',r:'Juan / Diego'},{t:'Acreditación activa en entrada',r:'Augusto'}]},
-    {sec:'Durante el día',items:[{t:'Inicio de competencia confirmado',r:'Carry / Máximo'},{t:'Transmisión streaming encendida',r:'Bajo la Suela'},{t:'Sector gastronómico operativo',r:'Producción'},{t:'Story en vivo publicada',r:'Diego / Juan'}]},
+    {sec:'Durante el día',items:[{t:'Inicio de competencia confirmado',r:'Guillermo Carry'},{t:'Transmisión streaming encendida',r:'Bajo la Suela'},{t:'Sector gastronómico operativo',r:'Producción'},{t:'Story en vivo publicada',r:'Diego / Juan'}]},
     {sec:'Cierre del día',items:[{t:'Resultados del día publicados en RRSS',r:'Carry / Diego'},{t:'Reunión de cierre 10 min',r:'Guillermo'},{t:'Pendientes críticos registrados',r:'Todos'}]},
   ],
   sabado:[
-    {sec:'Antes de arrancar',items:[{t:'Briefing operativo 10 min',r:'Guillermo'},{t:'Canchas listas para americano',r:'Carry / Máximo'},{t:'Setup Sunset Cordillera confirmado',r:'Producción'},{t:'DJ confirmado y sonido testeado',r:'Producción'},{t:'Sector gastronómico abastecido',r:'Producción'}]},
-    {sec:'Americano (mañana)',items:[{t:'Cruces y horarios publicados',r:'Carry / Máximo'},{t:'Cobertura en vivo streaming',r:'Bajo la Suela'},{t:'Stories de resultados en tiempo real',r:'Diego / Juan'}]},
+    {sec:'Antes de arrancar',items:[{t:'Briefing operativo 10 min',r:'Guillermo'},{t:'Canchas listas para americano',r:'Guillermo Carry'},{t:'Setup Sunset Cordillera confirmado',r:'Producción'},{t:'DJ confirmado y sonido testeado',r:'Producción'},{t:'Sector gastronómico abastecido',r:'Producción'}]},
+    {sec:'Americano (mañana)',items:[{t:'Cruces y horarios publicados',r:'Guillermo Carry'},{t:'Cobertura en vivo streaming',r:'Bajo la Suela'},{t:'Stories de resultados en tiempo real',r:'Diego / Juan'}]},
     {sec:'Sunset Cordillera (tarde)',items:[{t:'Zona social habilitada y ambientada',r:'Producción'},{t:'Sponsors activos en Sunset',r:'Juan'},{t:'Cobertura audiovisual del Sunset',r:'Bajo la Suela'},{t:'Post del Sunset publicado',r:'Diego'}]},
     {sec:'Cierre',items:[{t:'Reunión de cierre 15 min',r:'Guillermo'},{t:'Correcciones para el domingo registradas',r:'Todos'}]},
   ],
   domingo:[
-    {sec:'Antes de arrancar',items:[{t:'Briefing final 10 min',r:'Guillermo'},{t:'Cancha central lista para finales',r:'Carry / Máximo'},{t:'Premiación preparada (trofeos + logística)',r:'Augusto / Juan'},{t:'Guion de premiación confirmado',r:'Guillermo'}]},
+    {sec:'Antes de arrancar',items:[{t:'Briefing final 10 min',r:'Guillermo'},{t:'Cancha central lista para finales',r:'Guillermo Carry'},{t:'Premiación preparada (trofeos + logística)',r:'Augusto / Juan'},{t:'Guion de premiación confirmado',r:'Guillermo'}]},
     {sec:'Finales',items:[{t:'Streaming de finales en vivo',r:'Bajo la Suela'},{t:'Cobertura fotográfica completa',r:'Diego'},{t:'Invitados y sponsors en cancha central',r:'Juan'}]},
     {sec:'Premiación',items:[{t:'Premiación ejecutada en tiempo y forma',r:'Guillermo'},{t:'Fotos oficiales de premiación',r:'Bajo la Suela'},{t:'Agradecimiento a sponsors en vivo',r:'Juan'},{t:'Post de premiación publicado',r:'Diego / Juan'}]},
     {sec:'Post evento',items:[{t:'Desmontaje coordinado',r:'Producción'},{t:'Material audiovisual asegurado',r:'Bajo la Suela'},{t:'Reunión de cierre agendada (48-72 hs)',r:'Guillermo'},{t:'Informe a sponsors en plazo (5 días)',r:'Juan'}]},
@@ -486,10 +493,10 @@ const CHECKLIST_DATA = {
 
 // ══════════════ ESTADO ══════════════
 const REUNIONES_DEFAULT = [
-  {id:1, dia:'Lunes', nombre:'Reunión Operativa General', dur:'60 min'},
+  {id:1, dia:'Martes', nombre:'Reunión semanal · Actualización + decisiones + minuta', dur:'18:00 hs'},
   {id:2, dia:'Miércoles', nombre:'Check Comercial / Sponsors', dur:'30 min'},
   {id:3, dia:'Jueves', nombre:'Comunicación + Producción', dur:'45 min'},
-  {id:4, dia:'Viernes', nombre:'Deportivo (Carry + Máximo)', dur:'30 min'},
+  {id:4, dia:'Viernes', nombre:'Deportivo (Carry + Guillermo)', dur:'30 min'},
 ];
 
 let reuniones = [];
@@ -499,7 +506,7 @@ let nextReId = 500;
 let sponsors = [];
 let tareas = [];
 let checkState = {};
-let hitoFiltro = 'B';
+let hitoFiltro = 'A';
 let sponsorEditando = null;
 let nextSpId = 1000;
 let nextTaId = 2000;
@@ -561,8 +568,12 @@ async function cargarDesdeFirebase() {
   tareas     = data.tareas     ? Object.values(data.tareas)     : JSON.parse(JSON.stringify(TAREAS_DEFAULT));
   checkState = data.checks     ? data.checks                    : {};
   reuniones  = data.reuniones  ? Object.values(data.reuniones)  : JSON.parse(JSON.stringify(REUNIONES_DEFAULT));
-  // Si es la primera vez, cargamos defaults en Firebase
-  if(!snap.val()) {
+  // Si no hay datos o las tareas son de la 1ª Fecha (fechas de abril), cargamos defaults de julio
+  const tieneTareasJulio = tareas.some(t => t.fecha && t.fecha.startsWith('2026-07') || t.fecha && t.fecha.startsWith('2026-06') || t.fecha && t.fecha.startsWith('2026-05'));
+  if(!snap.val() || !tieneTareasJulio) {
+    tareas = JSON.parse(JSON.stringify(TAREAS_DEFAULT));
+    sponsors = [];
+    checkState = {};
     await guardarFirebase(true);
   }
   setSyncState('ok', 'En vivo ●');
@@ -648,7 +659,7 @@ function renderReuniones() {
 function abrirModalReunion(colDefault) {
   reunionEditando = null;
   document.getElementById('modal-re-titulo').textContent = 'Agregar reunión';
-  document.getElementById('re-dia').value = 'Lunes';
+  document.getElementById('re-dia').value = 'Martes';
   document.getElementById('re-nombre').value = '';
   document.getElementById('re-dur').value = '60 min';
   document.getElementById('btn-elim-re').style.display = 'none';
@@ -910,7 +921,7 @@ function formatFecha(f) {
 }
 
 function calcularDias() {
-  const hoy=new Date(); const ev=new Date('2026-04-24');
+  const hoy=new Date(); const ev=new Date('2026-07-03');
   const diff=Math.ceil((ev-hoy)/(1000*60*60*24));
   const el=document.getElementById('dias-restantes'); if(el) el.textContent=diff>0?diff:0;
 }
@@ -931,4 +942,3 @@ setTimeout(cargarDatos, 400);
 </script>
 </body>
 </html>
-
